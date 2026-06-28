@@ -3,95 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corretora de Seguros</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #004aad;
-      text-align: center;
-    }
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-    }
-    .menu li {
-      position: relative;
-      display: inline-block;
-    }
-    .menu li a {
-      text-decoration: none;
-      padding: 12px 20px;
-      display: block;
-      color: #fff;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .menu li a:hover {
-      background: #0066cc;
-    }
-    .submenu {
-      display: none;
-      position: absolute;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      min-width: 200px;
-      opacity: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      transform: translateY(10px);
-      z-index: 1000;
-    }
-    .submenu li a {
-      padding: 10px 15px;
-      color: #004080;
-      font-weight: normal;
-    }
-    .submenu li a:hover {
-      background: #f0f0f0;
-    }
-    .menu li:hover .submenu {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    main {
-      padding: 20px;
-    }
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  <title>Vettor Corretora de Seguros</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Vettor Corretora de Seguros</h1>
     <p>Consultoria especializada em seguros</p>
   </header>
+
+  <!-- Menu responsivo -->
   <nav>
-    <ul class="menu">
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul class="menu" id="menu">
       <li><a href="index.html">Início</a></li>
       <li>
         <a href="#">Sobre ▾</a>
@@ -102,16 +26,27 @@
         </ul>
       </li>
       <li><a href="#">Serviços</a></li>
-      <li><a href="#">Contato</a></li>
+      <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
+
   <main>
     <h2>Bem-vindo!</h2>
     <p>Site em construção. Em breve haverá mais conteúdo aqui.</p>
   </main>
+
   <footer>
     <p>© 2026 Vettor Corretora de Seguros</p>
   </footer>
+
+  <!-- Script para abrir/fechar menu no celular -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
-
