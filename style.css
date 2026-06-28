@@ -304,21 +304,27 @@ footer {
 .barra-azul {
   background-color: #004aad;
   color: white;
-  padding-bottom: 20px;
+  padding: 0; /* remove espaçamento extra */
+  margin: 0;
 }
 
 /* Banner principal */
 .banner {
   background-image: url("imagens/banner-principal.jpg");
-  background-size: contain; /* mostra a imagem inteira */
-  background-repeat: no-repeat;
+  background-size: cover; /* ocupa toda a largura */
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  min-height: 400px; /* ajusta a altura mínima */
+  min-height: 300px; /* altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
+
 
 
 /* Ícone flutuante do WhatsApp */
@@ -339,4 +345,26 @@ footer {
 
 .whatsapp-float img:hover {
   transform: scale(1.1);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 200px; /* reduz altura no celular */
+    padding: 20px 10px;
+    background-size: contain; /* mostra a imagem inteira sem cortar */
+  }
+
+  .banner h2 {
+    font-size: 1.8em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  nav ul.menu {
+    flex-direction: column;
+    text-align: center;
+  }
 }
