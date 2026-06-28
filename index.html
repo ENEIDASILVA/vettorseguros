@@ -3,47 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vettor Corretora de Seguros</title>
+  <title>Vettor Seguros - Página Principal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Vettor Corretora de Seguros</h1>
-    <p>Consultoria especializada em seguros</p>
+  <!-- Logo no canto superior direito -->
+  <div class="logo-topo">
+    <img src="imagens/logo-vettor.jpg" alt="Vettor Seguros" />
+  </div>
+
+  <!-- Barra azul com banner e menu -->
+  <header class="barra-azul">
+    <section class="banner">
+      <h2>Bem-vindo à Vettor Seguros</h2>
+      <p>Proteção completa para você, sua família e seu patrimônio.</p>
+    </section>
+
+    <!-- Menu -->
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li>
+          <a href="#">Sobre ▾</a>
+          <ul class="submenu">
+            <li><a href="seguro-residencial.html">Seguro Residencial</a></li>
+            <li><a href="seguro-automotivo.html">Seguro Automotivo</a></li>
+            <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Menu responsivo -->
-  <nav>
-    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li>
-        <a href="#">Produtos ▾</a>
-        <ul class="submenu">
-          <li><a href="seguro-residencial.html">Seguro Residencial</a></li>
-          <li><a href="seguro-automotivo.html">Seguro Automotivo</a></li>
-          <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Serviços</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
-
+  <!-- Conteúdo principal -->
   <main>
-    <h2>Bem-vindo!</h2>
-    <p>Site em construção. Em breve haverá mais conteúdo aqui.</p>
+    <section class="intro">
+      <h2>Segurança e Confiança</h2>
+      <p>Na Vettor Seguros, oferecemos soluções personalizadas para proteger o que é mais importante para você.</p>
+    </section>
   </main>
 
   <footer>
     <p>© 2026 Vettor Corretora de Seguros</p>
   </footer>
 
-  <!-- Script para abrir/fechar menu no celular -->
+  <!-- Script para menu responsivo -->
   <script>
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-
     toggle.addEventListener('click', () => {
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
