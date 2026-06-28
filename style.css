@@ -231,3 +231,36 @@ footer {
   color: #c62828;            /* vermelho escuro */
   border: 1px solid #c62828;
 }
+
+/* Mensagens de feedback com animação */
+#mensagem-sucesso, 
+#mensagem-erro {
+  display: none;            /* escondidas por padrão */
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;               /* invisível inicialmente */
+  transition: opacity 0.6s ease; /* animação suave */
+}
+
+/* Sucesso */
+#mensagem-sucesso {
+  background-color: #e6ffed; /* verde suave */
+  color: #2e7d32;            /* verde escuro */
+  border: 1px solid #2e7d32;
+}
+
+/* Erro */
+#mensagem-erro {
+  background-color: #ffebee; /* vermelho suave */
+  color: #c62828;            /* vermelho escuro */
+  border: 1px solid #c62828;
+}
+
+/* Classe para ativar fade-in */
+.mostrar {
+  display: block !important;
+  opacity: 1 !important;
+}
