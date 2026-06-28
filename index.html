@@ -19,15 +19,57 @@
       text-align: center;
     }
     nav {
-      background-color: #ddd;
-      padding: 10px;
+      background-color: #004aad;
       text-align: center;
     }
-    nav a {
-      margin: 0 15px;
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    .menu li {
+      position: relative;
+      display: inline-block;
+    }
+    .menu li a {
       text-decoration: none;
-      color: #004aad;
+      padding: 12px 20px;
+      display: block;
+      color: #fff;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .menu li a:hover {
+      background: #0066cc;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      min-width: 200px;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(10px);
+      z-index: 1000;
+    }
+    .submenu li a {
+      padding: 10px 15px;
+      color: #004080;
+      font-weight: normal;
+    }
+    .submenu li a:hover {
+      background: #f0f0f0;
+    }
+    .menu li:hover .submenu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
     main {
       padding: 20px;
@@ -46,23 +88,30 @@
 <body>
   <header>
     <h1>Vettor Corretora de Seguros</h1>
-    <p>Consutoria especializada em seguros</p>
+    <p>Consultoria especializada em seguros</p>
   </header>
-  
   <nav>
-    <a href="index.html">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Serviços</a>
-    <a href="https://www.gmail.com">Contato</a>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li>
+        <a href="#">Sobre ▾</a>
+        <ul class="submenu">
+          <li><a href="#">Seguro Residencial</a></li>
+          <li><a href="#">Seguro Automotivo</a></li>
+          <li><a href="#">Seguro de Vida</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
   </nav>
-  
   <main>
     <h2>Bem-vindo!</h2>
     <p>Site em construção. Em breve haverá mais conteúdo aqui.</p>
   </main>
-  
   <footer>
-    <p>&copy; 2026 - Todos os direitos reservados. </p>
+    <p>© 2026 Vettor Corretora de Seguros</p>
   </footer>
 </body>
 </html>
+
