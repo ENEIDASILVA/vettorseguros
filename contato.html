@@ -88,13 +88,14 @@
         });
 
         if (resposta.ok) {
-          mensagemSucesso.style.display = 'block'; // mostra mensagem de sucesso
-          mensagemErro.style.display = 'none';
-          form.reset(); // limpa os campos
-        } else {
-          mensagemErro.style.display = 'block'; // mostra mensagem de erro
-          mensagemSucesso.style.display = 'none';
-        }
+  mensagemSucesso.classList.add('mostrar'); // aplica fade-in
+  mensagemErro.classList.remove('mostrar');
+  form.reset(); // limpa os campos
+} else {
+  mensagemErro.classList.add('mostrar');
+  mensagemSucesso.classList.remove('mostrar');
+}
+
       } catch (erro) {
         mensagemErro.style.display = 'block'; // erro de rede ou servidor
         mensagemSucesso.style.display = 'none';
