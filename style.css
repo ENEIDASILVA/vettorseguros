@@ -266,18 +266,15 @@ footer {
 }
 
 /* Logo no canto superior esquerdo */
-.topo {
-  display: flex;
-  align-items: center;
-  background-color: #004aad;
-  color: white;
+.logo-topo {
+  text-align: left;   /* antes estava right */
   padding: 10px 20px;
 }
 
-.topo .logo img {
-  height: 60px;
-  margin-right: 20px;
+.logo-topo img {
+  height: 70px;
 }
+
 
 /* Seção de cotação */
 .cotacao {
