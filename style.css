@@ -368,3 +368,23 @@ footer {
     text-align: center;
   }
 }
+
+/* Menu aberto automaticamente em telas pequenas */
+@media (max-width: 768px) {
+  nav ul.menu {
+    display: block !important;   /* força o menu a aparecer */
+    flex-direction: column;
+    text-align: center;
+    background-color: #004aad;   /* mantém a faixa azul */
+    padding: 10px 0;
+  }
+
+  nav ul.menu li {
+    margin: 10px 0;
+  }
+
+  /* Esconde o botão ☰ no celular */
+  .menu-toggle {
+    display: none;
+  }
+}
