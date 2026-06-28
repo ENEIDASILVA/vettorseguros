@@ -39,6 +39,9 @@
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
 
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" placeholder="(31) 99999-9999" required>
+      
       <label for="email">E-mail:</label>
       <input type="email" id="email" name="email" required>
 
@@ -48,6 +51,33 @@
       <button type="submit">Enviar</button>
     </form>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const telefoneInput = document.getElementById("telefone");
+
+    telefoneInput.addEventListener("input", function(e) {
+      let value = telefoneInput.value.replace(/\D/g, ""); // remove tudo que não for número
+
+      if (value.length > 11) {
+        value = value.slice(0, 11); // limita a 11 dígitos
+      }
+
+      // aplica a máscara (xx) xxxxx-xxxx
+      if (value.length > 6) {
+        telefoneInput.value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+      } else if (value.length > 2) {
+        telefoneInput.value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+      } else {
+        telefoneInput.value = value;
+      }
+    });
+  });
+</script>
+
+
+
+
+    
     <!-- Mensagens de feedback -->
     <p id="mensagem-sucesso">✅ Seu contato foi enviado com sucesso!</p>
     <p id="mensagem-erro">❌ Não foi possível enviar sua mensagem. Tente novamente mais tarde.</p>
