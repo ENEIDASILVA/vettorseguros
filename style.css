@@ -117,7 +117,7 @@ footer {
   max-width: 500px;
   margin: 20px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* garante que os campos fiquem em coluna */
 }
 
 .form-contato label {
@@ -127,6 +127,8 @@ footer {
 
 .form-contato input,
 .form-contato textarea {
+  width: 100%;              /* ocupa toda a largura disponível */
+  box-sizing: border-box;   /* inclui padding/borda no cálculo da largura */
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
@@ -148,6 +150,7 @@ footer {
 .form-contato button:hover {
   background-color: #0066cc;
 }
+
 
 /* Menu hamburguer responsivo */
 .menu-toggle {
