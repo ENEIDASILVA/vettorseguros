@@ -310,15 +310,6 @@ footer {
   font-size: 1.2em;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
-/* Logo no canto superior direito */
-.logo-topo {
-  text-align: right;
-  padding: 10px 20px;
-}
-
-.logo-topo img {
-  height: 70px;
-}
 
 /* Barra azul */
 .barra-azul {
