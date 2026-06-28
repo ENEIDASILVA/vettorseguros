@@ -34,7 +34,7 @@
     <p>Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</p>
 
     <!-- Formulário com Formspree -->
-    <form id="contato-form" action="https://formspree.io/f/mlgynkkz" method="POST" class="form-contato">
+    <form id="contato-form" action="https://formspree.io/f/SEU_ENDPOINT" method="POST" class="form-contato">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -48,12 +48,8 @@
     </form>
 
     <!-- Mensagens de feedback -->
-    <p id="mensagem-sucesso" style="display:none; color:green; font-weight:bold;">
-      ✅ Seu contato foi enviado com sucesso!
-    </p>
-    <p id="mensagem-erro" style="display:none; color:red; font-weight:bold;">
-      ❌ Não foi possível enviar sua mensagem. Tente novamente mais tarde.
-    </p>
+    <p id="mensagem-sucesso">✅ Seu contato foi enviado com sucesso!</p>
+    <p id="mensagem-erro">❌ Não foi possível enviar sua mensagem. Tente novamente mais tarde.</p>
 
     <p><a href="index.html" class="voltar">← Voltar para a página principal</a></p>
   </main>
@@ -88,18 +84,16 @@
         });
 
         if (resposta.ok) {
-  mensagemSucesso.classList.add('mostrar'); // aplica fade-in
-  mensagemErro.classList.remove('mostrar');
-  form.reset(); // limpa os campos
-} else {
-  mensagemErro.classList.add('mostrar');
-  mensagemSucesso.classList.remove('mostrar');
-}
-
+          mensagemSucesso.classList.add('mostrar'); // aplica fade-in
+          mensagemErro.classList.remove('mostrar');
+          form.reset(); // limpa os campos
+        } else {
+          mensagemErro.classList.add('mostrar');
+          mensagemSucesso.classList.remove('mostrar');
+        }
       } catch (erro) {
-       mensagemErro.classList.add('mostrar');
+        mensagemErro.classList.add('mostrar');
         mensagemSucesso.classList.remove('mostrar');
-
       }
     });
   </script>
