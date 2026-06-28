@@ -5,34 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seguro de Vida - Vettor Seguros</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .voltar {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 15px;
-      background-color: #004aad;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    .voltar:hover {
-      background-color: #0066cc;
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>Seguro de Vida</h1>
   </header>
+
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li>
+        <a href="#">Sobre ▾</a>
+        <ul class="submenu">
+          <li><a href="seguro-residencial.html">Seguro Residencial</a></li>
+          <li><a href="seguro-automotivo.html">Seguro Automotivo</a></li>
+          <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
   <main>
     <p>Garanta o futuro da sua família com nosso seguro de vida. 
     Planos flexíveis que oferecem proteção financeira em momentos importantes.</p>
 
     <p><a href="index.html" class="voltar">← Voltar para a página principal</a></p>
   </main>
+
   <footer>
     <p>© 2026 Vettor Corretora de Seguros</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
