@@ -97,8 +97,9 @@
 }
 
       } catch (erro) {
-        mensagemErro.style.display = 'block'; // erro de rede ou servidor
-        mensagemSucesso.style.display = 'none';
+       mensagemErro.classList.add('mostrar');
+        mensagemSucesso.classList.remove('mostrar');
+
       }
     });
   </script>
