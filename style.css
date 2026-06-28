@@ -207,3 +207,27 @@ footer {
     background-color: #0066cc;
   }
 }
+/* Mensagens de feedback do formulário */
+#mensagem-sucesso, 
+#mensagem-erro {
+  display: none;            /* escondidas por padrão */
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Sucesso */
+#mensagem-sucesso {
+  background-color: #e6ffed; /* verde suave */
+  color: #2e7d32;            /* verde escuro */
+  border: 1px solid #2e7d32;
+}
+
+/* Erro */
+#mensagem-erro {
+  background-color: #ffebee; /* vermelho suave */
+  color: #c62828;            /* vermelho escuro */
+  border: 1px solid #c62828;
+}
