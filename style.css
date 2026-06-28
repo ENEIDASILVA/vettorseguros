@@ -265,17 +265,6 @@ footer {
   opacity: 1 !important;
 }
 
-/* Logo no canto superior esquerdo */
-.logo-topo {
-  text-align: left;   /* antes estava right */
-  padding: 10px 20px;
-}
-
-.logo-topo img {
-  height: 70px;
-}
-
-
 /* Seção de cotação */
 .cotacao {
   max-width: 600px;
