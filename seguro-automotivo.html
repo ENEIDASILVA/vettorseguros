@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Cabeçalho com logo -->
+  <header class="topo">
+    <div class="logo">
+      <img src="imagens/logo-vettor.jpg" alt="Vettor Seguros" />
+    </div>
     <h1>Seguro Automotivo</h1>
   </header>
 
+  <!-- Menu -->
   <nav>
     <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
     <ul class="menu" id="menu">
@@ -28,22 +33,85 @@
     </ul>
   </nav>
 
+  <!-- Conteúdo principal -->
   <main>
-    <p>Tenha tranquilidade ao dirigir com nosso seguro automotivo. 
-    Cobertura contra colisões, roubos, assistência 24h e muito mais.</p>
+    <section class="intro">
+      <h2>Proteja seu veículo com a Vettor Seguros</h2>
+      <p>Oferecemos planos personalizados para garantir tranquilidade e segurança no seu dia a dia.</p>
+    </section>
 
-    <p><a href="index.html" class="voltar">← Voltar para a página principal</a></p>
+    <!-- Formulário de cotação -->
+    <section class="cotacao">
+      <h3>Solicite sua cotação</h3>
+      <form id="cotacao-form" action="https://formspree.io/f/SEU_ENDPOINT" method="POST" class="form-contato">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="veiculo">Modelo do veículo:</label>
+        <input type="text" id="veiculo" name="veiculo" required>
+
+        <label for="ano">Ano do veículo:</label>
+        <input type="number" id="ano" name="ano" required>
+
+        <label for="mensagem">Observações:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <button type="submit">Enviar Cotação</button>
+      </form>
+
+      <!-- Mensagens de feedback -->
+      <p id="mensagem-sucesso">✅ Cotação enviada com sucesso! Em breve entraremos em contato.</p>
+      <p id="mensagem-erro">❌ Não foi possível enviar sua cotação. Tente novamente mais tarde.</p>
+    </section>
   </main>
 
   <footer>
     <p>© 2026 Vettor Corretora de Seguros</p>
   </footer>
 
+  <!-- Script -->
   <script>
+    // Menu responsivo
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     toggle.addEventListener('click', () => {
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Envio do formulário com feedback
+    const form = document.getElementById('cotacao-form');
+    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const dados = new FormData(form);
+      try {
+        const resposta = await fetch(form.action, {
+          method: form.method,
+          body: dados,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (resposta.ok) {
+          mensagemSucesso.classList.add('mostrar');
+          mensagemErro.classList.remove('mostrar');
+          form.reset();
+        } else {
+          mensagemErro.classList.add('mostrar');
+          mensagemSucesso.classList.remove('mostrar');
+        }
+      } catch (erro) {
+        mensagemErro.classList.add('mostrar');
+        mensagemSucesso.classList.remove('mostrar');
+      }
     });
   </script>
 </body>
