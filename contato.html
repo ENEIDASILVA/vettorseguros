@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Vettor Seguros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contato</h1>
+  </header>
+
+  <!-- Menu responsivo -->
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li>
+        <a href="#">Sobre ▾</a>
+        <ul class="submenu">
+          <li><a href="seguro-residencial.html">Seguro Residencial</a></li>
+          <li><a href="seguro-automotivo.html">Seguro Automotivo</a></li>
+          <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Fale Conosco</h2>
+    <p>Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</p>
+
+    <form action="#" method="post" class="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p><a href="index.html" class="voltar">← Voltar para a página principal</a></p>
+  </main>
+
+  <footer>
+    <p>© 2026 Vettor Corretora de Seguros</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
