@@ -90,10 +90,11 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
+  position: relative; /* antes estava fixed */
   bottom: 0;
   width: 100%;
 }
+
 
 /* Botão voltar */
 .voltar {
