@@ -264,3 +264,32 @@ footer {
   display: block !important;
   opacity: 1 !important;
 }
+
+/* Logo no canto superior esquerdo */
+.topo {
+  display: flex;
+  align-items: center;
+  background-color: #004aad;
+  color: white;
+  padding: 10px 20px;
+}
+
+.topo .logo img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Seção de cotação */
+.cotacao {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cotacao h3 {
+  margin-bottom: 15px;
+  color: #004aad;
+}
