@@ -34,7 +34,7 @@
     <p>Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</p>
 
     <!-- Formulário com Formspree -->
-    <form id="contato-form" action="https://formspree.io/f/SEU_ENDPOINT" method="POST" class="form-contato">
+    <form id="contato-form" action="https://formspree.io/f/mlgynkkz" method="POST" class="form-contato">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -47,9 +47,12 @@
       <button type="submit">Enviar</button>
     </form>
 
-    <!-- Mensagem de confirmação -->
+    <!-- Mensagens de feedback -->
     <p id="mensagem-sucesso" style="display:none; color:green; font-weight:bold;">
       ✅ Seu contato foi enviado com sucesso!
+    </p>
+    <p id="mensagem-erro" style="display:none; color:red; font-weight:bold;">
+      ❌ Não foi possível enviar sua mensagem. Tente novamente mais tarde.
     </p>
 
     <p><a href="index.html" class="voltar">← Voltar para a página principal</a></p>
@@ -71,22 +74,30 @@
     // Envio do formulário sem redirecionar
     const form = document.getElementById('contato-form');
     const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    const mensagemErro = document.getElementById('mensagem-erro');
 
     form.addEventListener('submit', async function(event) {
       event.preventDefault(); // impede redirecionamento padrão
 
       const dados = new FormData(form);
-      const resposta = await fetch(form.action, {
-        method: form.method,
-        body: dados,
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        const resposta = await fetch(form.action, {
+          method: form.method,
+          body: dados,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      if (resposta.ok) {
-        mensagemSucesso.style.display = 'block'; // mostra mensagem
-        form.reset(); // limpa os campos
-      } else {
-        alert("❌ Ocorreu um erro ao enviar. Tente novamente.");
+        if (resposta.ok) {
+          mensagemSucesso.style.display = 'block'; // mostra mensagem de sucesso
+          mensagemErro.style.display = 'none';
+          form.reset(); // limpa os campos
+        } else {
+          mensagemErro.style.display = 'block'; // mostra mensagem de erro
+          mensagemSucesso.style.display = 'none';
+        }
+      } catch (erro) {
+        mensagemErro.style.display = 'block'; // erro de rede ou servidor
+        mensagemSucesso.style.display = 'none';
       }
     });
   </script>
