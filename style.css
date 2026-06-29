@@ -280,14 +280,31 @@ footer {
   color: #004aad;
 }
 /* Banner automotivo */
-.banner {
-  background-image: url("imagens/banner-carro.jpg"); /* coloque sua imagem aqui */
-  background-size: cover;
-  background-position: center;
+/* Barra azul */
+.barra-azul {
+  background-color: #004aad;
   color: white;
-  text-align: center;
-  padding: 80px 20px;
+  padding: 0; /* remove espaçamento extra */
+  margin: 0;
 }
+
+/* Banner principal */
+.banner {
+  background-image: url("imagens/banner-principal.jpg");
+  background-size: cover; /* ocupa toda a largura */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 300px; /* altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
 
 .banner h2 {
   font-size: 2.5em;
