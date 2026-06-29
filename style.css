@@ -308,18 +308,20 @@ footer {
   margin: 0;
 }
 
-/* Banner principal */
+/* Banner principal apenas com fundo azul */
 .banner {
+  background-color: #004aad;   /* azul sólido */
   width: 100%;
-  overflow: hidden;
+  min-height: 300px;           /* altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: white;
+  padding: 40px 20px;
 }
 
-.banner img {
-  width: 100%;   /* ocupa toda a largura */
-  height: auto;  /* mantém proporção */
-  display: block;
-}
 
 
 
