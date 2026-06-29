@@ -310,21 +310,17 @@ footer {
 
 /* Banner principal */
 .banner {
-  background-image: url("imagens/banner-principal.jpg");
-  background-size: cover; /* ocupa toda a largura */
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner img {
   width: 100%;
   height: auto;
-  min-height: 300px; /* altura mínima */
   display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 40px 20px;
 }
+
 
 
 
