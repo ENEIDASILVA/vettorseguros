@@ -316,10 +316,11 @@ footer {
 }
 
 .banner img {
-  width: 100%;
-  height: auto;
+  width: 100%;   /* ocupa toda a largura */
+  height: auto;  /* mantém proporção */
   display: block;
 }
+
 
 
 
