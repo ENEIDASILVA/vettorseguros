@@ -73,63 +73,97 @@ header img {
       <!-- Formulário integrado ao Formspree -->
       <form id="cotacaoForm" action="https://formspree.io/f/mlgynkkz" method="POST">
         
-        <!-- 1. Dados do Segurado -->
+        <!-- Questionário original -->
         <div class="section-title">1. Dados do Segurado</div>
         <div class="row">
-          <div class="col-md-6"><label>Nome Completo *</label><input class="form-control" name="nome" required></div>
-          <div class="col-md-6"><label>CPF *</label><input class="form-control" name="cpf"></div>
-          <div class="col-md-4"><label>Data de Nascimento</label><input type="date" class="form-control" name="data_nascimento"></div>
-          <div class="col-md-4"><label>Estado Civil</label><input class="form-control" name="estado_civil"></div>
-          <div class="col-md-4"><label>Profissão</label><input class="form-control" name="profissao"></div>
-          <div class="col-md-6"><label>Escolaridade</label><input class="form-control" name="escolaridade"></div>
-          <div class="col-md-6"><label>E-mail</label><input type="email" class="form-control" name="email"></div>
-          <div class="col-md-6"><label>Telefone</label><input class="form-control" name="telefone"></div>
-          <div class="col-md-6"><label>CEP</label><input class="form-control" name="cep"></div>
-          <div class="col-12"><label>Endereço</label><input class="form-control" name="endereco"></div>
+          <div class="col-md-6">
+            <label>Nome Completo *</label>
+            <input class="form-control" name="nome" required>
+          </div>
+          <div class="col-md-6">
+            <label>CPF *</label>
+            <input class="form-control" name="cpf">
+          </div>
+          <div class="col-md-4">
+            <label>Data de Nascimento</label>
+            <input type="date" class="form-control" name="data_nascimento">
+          </div>
+          <div class="col-md-4">
+            <label>Estado Civil</label>
+            <input class="form-control" name="estado_civil">
+          </div>
+          <div class="col-md-4">
+            <label>Profissão</label>
+            <input class="form-control" name="profissao">
+          </div>
+          <div class="col-md-6">
+            <label>Escolaridade</label>
+            <input class="form-control" name="escolaridade">
+          </div>
+          <div class="col-md-6">
+            <label>E-mail</label>
+            <input type="email" class="form-control" name="email">
+          </div>
+          <div class="col-md-6">
+            <label>Telefone</label>
+            <input class="form-control" name="telefone">
+          </div>
+          <div class="col-md-6">
+            <label>CEP</label>
+            <input class="form-control" name="cep">
+          </div>
+          <div class="col-12">
+            <label>Endereço</label>
+            <input class="form-control" name="endereco">
+          </div>
         </div>
 
-        <!-- 2. Dados do Veículo -->
-        <div class="section-title">2. Dados do Veículo</div>
-        <div class="row">
-          <div class="col-md-4"><label>Marca</label><input class="form-control" name="marca"></div>
-          <div class="col-md-4"><label>Modelo</label><input class="form-control" name="modelo"></div>
-          <div class="col-md-4"><label>Ano</label><input class="form-control" name="ano"></div>
-          <div class="col-md-4"><label>Placa</label><input class="form-control" name="placa"></div>
-          <div class="col-md-4"><label>Chassi</label><input class="form-control" name="chassi"></div>
-          <div class="col-md-4"><label>Renavam</label><input class="form-control" name="renavam"></div>
-          <div class="col-md-3"><label>Cor</label><input class="form-control" name="cor"></div>
-          <div class="col-md-3"><label>Combustível</label><input class="form-control" name="combustivel"></div>
-          <div class="col-md-3"><label>KM</label><input class="form-control" name="km"></div>
-          <div class="col-md-3"><label>Zero KM?</label><select class="form-select" name="zero_km"><option>Não</option><option>Sim</option></select></div>
-          <div class="col-md-4"><label>Possui GNV?</label><select class="form-select" name="gnv"><option>Não</option><option>Sim</option></select></div>
-          <div class="col-md-4"><label>Blindado?</label><select class="form-select" name="blindado"><option>Não</option><option>Sim</option></select></div>
-          <div class="col-md-4"><label>Alienado?</label><select class="form-select" name="alienado"><option>Não</option><option>Sim</option></select></div>
-        </div>
+        <!-- Continue adicionando name="..." em todos os campos do questionário (Veículo, Utilização, Condutor, Seguro Atual, Coberturas, etc.) -->
 
-        <!-- 3. Utilização -->
-        <div class="section-title">3. Utilização</div>
-        <div class="row">
-          <div class="col-md-4"><label>Uso</label><select class="form-select" name="uso"><option>Particular</option><option>Comercial</option><option>Aplicativo</option></select></div>
-          <div class="col-md-4"><label>CEP de Pernoite</label><input class="form-control" name="cep_pernoite"></div>
-          <div class="col-md-4"><label>KM Mensal</label><input class="form-control" name="km_mensal"></div>
-          <div class="col-md-6"><label>Garagem</label><select class="form-select" name="garagem"><option>Residência</option><option>Trabalho</option><option>Faculdade</option><option>Não possui</option></select></div>
-          <div class="col-md-6"><label>Distância Trabalho</label><input class="form-control" name="distancia_trabalho"></div>
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-vettor">🚗 SOLICITAR MINHA COTAÇÃO</button>
         </div>
+      </form>
 
-        <!-- 4. Principal Condutor -->
-        <div class="section-title">4. Principal Condutor</div>
-        <div class="row">
-          <div class="col-md-6"><label>Nome</label><input class="form-control" name="condutor_nome"></div>
-          <div class="col-md-6"><label>CPF</label><input class="form-control" name="condutor_cpf"></div>
-          <div class="col-md-4"><label>Data Nascimento</label><input type="date" class="form-control" name="condutor_nascimento"></div>
-          <div class="col-md-4"><label>Sexo</label><select class="form-select" name="condutor_sexo"><option>Masculino</option><option>Feminino</option></select></div>
-          <div class="col-md-4"><label>CNH</label><input class="form-control" name="condutor_cnh"></div>
-        </div>
+      <!-- Mensagem de sucesso -->
+      <div class="success-message" id="successMessage">
+        ✅ Obrigado! Sua cotação foi enviada com sucesso. Em breve entraremos em contato.
+      </div>
 
-        <!-- 5. Seguro Atual -->
-        <div class="section-title">5. Seguro Atual</div>
-        <div class="row">
-          <div class="col-md-4"><label>Novo ou Renovação</label><select class="form-select" name="seguro_tipo"><option>Novo</option><option>Renovação</option></select></div>
-          <div class="col-md-4"><label>Seguradora</label><input class="form-control" name="seguradora"></div>
-          <div class="col-md-4"><label>Classe de Bônus</label><input class="form-control" name="bonus"></div>
-          <div class="col-md-6"><label>Apólice
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("cotacaoForm");
+  const successMessage = document.getElementById("successMessage");
+  const bannerImg = document.getElementById("bannerImg");
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset(); // limpa todos os campos
+      if (bannerImg) {
+        bannerImg.style.display = "none"; // esconde a imagem/banner
+      }
+      successMessage.style.display = "block"; // mostra mensagem
+      setTimeout(() => {
+        successMessage.style.display = "none"; // esconde após 5s
+      }, 5000);
+    } else {
+      alert("❌ Ocorreu um erro ao enviar. Tente novamente.");
+    }
+  });
+});
+</script>
+</body>
+</html>
