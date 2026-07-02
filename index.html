@@ -1,263 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VETTOR SEGUROS | Proteção Inteligente</title>
-
-<meta name="description"
-content="A Vettor Seguros oferece as melhores soluções em Seguro Auto, Vida, Residencial, Empresarial e muito mais. Solicite sua cotação online.">
-
-<meta name="keywords"
-content="Seguro Auto, Seguro Vida, Seguro Empresarial, Seguro Residencial, Corretora de Seguros, Vettor Seguros">
-
-<meta name="author" content="VETTOR SEGUROS">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<link rel="stylesheet" href="css/style.css">
-
-<link rel="icon" href="assets/logo/favicon.png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vettor Seguros - Página Principal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<!-- Ícone do WhatsApp -->
+<a href="https://wa.me/5531993539953" target="_blank" class="whatsapp-float">
+  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
+</a>
 
-<body>
+  <body>
 
-<header>
 
-<div class="container">
 
-<div class="logo">
 
-<img src="assets/logo/logo-vettor.png"
-alt="Vettor Seguros">
-
+  <!-- Barra azul com banner -->
+    <div class="barra-azul">
+   <!-- Banner principal -->
+<div class="banner">
+  <!-- <img src="imagens/banner-principal.jpg" alt="Banner Vettor Seguros"> -->
 </div>
 
-<nav>
 
-<ul>
-
-<li><a href="#inicio">Início</a></li>
-
-<li><a href="#seguros">Seguros</a></li>
-
-<li><a href="#cotacao">Cotação</a></li>
-
-<li><a href="#sobre">Sobre</a></li>
-
-<li><a href="#contato">Contato</a></li>
-
-</ul>
-
+    <!-- Menu -->
+    <nav>
+  <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Início</a></li>
+    <li>
+      <a href="#">Produtos ▾</a>
+      <ul class="submenu">
+        <li><a href="seguro-residencial.html">Seguro Residencial</a></li>
+        <li><a href="seguro-automotivo.html">Seguro Automotivo</a></li>
+        <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
 </nav>
 
-<div class="menu-mobile">
 
-<i class="fa-solid fa-bars"></i>
-
-</div>
-
-<a class="botao-whatsapp"
-
-href="https://wa.me/5531993539953"
-
-target="_blank">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-</div>
-
-</header>
-
-<section class="hero" id="inicio">
-
-<div class="container hero-grid">
-
-<div class="hero-texto">
-
-<span class="tag">
-
-Especialistas em Seguros
-
-</span>
-
-<h1>
-
-Proteção inteligente para você,
-sua família e seu patrimônio.
-
-</h1>
-
-<p>
-
-Na VETTOR SEGUROS você encontra atendimento personalizado,
-as melhores seguradoras do mercado e soluções sob medida.
-
-</p>
-
-<div class="hero-botoes">
-
-<a href="#cotacao"
-
-class="btn-primario">
-
-Solicite sua Cotação
-
-</a>
-
-<a
-
-href="https://wa.me/5531993539953"
-
-class="btn-secundario"
-
-target="_blank">
-
-Falar no WhatsApp
-
-</a>
-
-</div>
-
-<div class="estatisticas">
-
-<div>
-
-<h2>+15</h2>
-
-<p>Seguradoras Parceiras</p>
-
-</div>
-
-<div>
-
-<h2>100%</h2>
-
-<p>Atendimento Personalizado</p>
-
-</div>
-
-<div>
-
-<h2>24h</h2>
-
-<p>Suporte ao Cliente</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-imagem">
-
-<img
-
-src="assets/images/banner-principal.png"
-
-alt="Seguro Auto">
-
-</div>
-
-</div>
-
-</section>
-
-<section class="beneficios">
-
-<div class="container">
-
-<div class="titulo">
-
-<h2>
-
-Por que escolher a VETTOR?
-
-</h2>
-
-<p>
-
-Mais tranquilidade para proteger o que realmente importa.
-
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-shield-heart"></i>
-
-<h3>Atendimento Humanizado</h3>
-
-<p>
-
-Você fala diretamente com um especialista.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-car"></i>
-
-<h3>Cotação Rápida</h3>
-
-<p>
-
-Comparação entre diversas seguradoras.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-medal"></i>
-
-<h3>Melhores Coberturas</h3>
-
-<p>
-
-Planos personalizados para cada perfil.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-headset"></i>
-
-<h3>Suporte em Sinistros</h3>
-
-<p>
-
-Acompanhamento do início ao fim.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+    
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="intro">
+      <h2>Segurança e Confiança</h2>
+      <p>Na Vettor Seguros, oferecemos soluções personalizadas para proteger o que é mais importante para você.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Vettor  Seguros</p>
+  </footer>
+
+  <!-- Script para menu responsivo -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
